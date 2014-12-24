@@ -1,6 +1,7 @@
 import nuke
 import msgBox
 from PyQt4.QtGui import QApplication, QMessageBox
+import appUsageApp
 
 def change():
     nodes = nuke.selectedNodes('Read')
@@ -11,3 +12,5 @@ def change():
         return
     for node in nodes:
         node.knob('tile_color').setValue(0)
+    
+    appUsageApp.updateDatabase('RedToDefault')
