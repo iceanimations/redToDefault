@@ -14,3 +14,5 @@ def change():
         node.knob('tile_color').setValue(0)
     
     appUsageApp.updateDatabase('RedToDefault')
+    
+    return True
